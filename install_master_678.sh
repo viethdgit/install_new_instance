@@ -1,4 +1,4 @@
-mv elasticsearch-6.8.0 elasticsearch8 
+mv /opt/elasticsearch-6.8.0 /opt/elasticsearch8 
 
 cat > /opt/elasticsearch8/config/elasticsearch.yml <<END
 cluster.name: production

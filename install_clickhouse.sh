@@ -1,5 +1,5 @@
-mv elasticsearch-6.8.0 elasticsearch8
-cp -r elasticsearch8 elasticsearch9
+mv /opt/elasticsearch-6.8.0 /opt/elasticsearch8
+cp -r /opt/elasticsearch8 /opt/elasticsearch9
 
 cat > /opt/elasticsearch8/config/elasticsearch.yml <<END
 cluster.name: production
