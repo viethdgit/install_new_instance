@@ -258,42 +258,6 @@ cat > /opt/elasticsearch8/config/jvm.options <<END
 10-:-XX:UseAVX=2
 END
 
-cat > /opt/elasticsearch8/config/jvm.options <<END
--Xms2g
--Xmx2g
--XX:+UseConcMarkSweepGC
--XX:CMSInitiatingOccupancyFraction=75
--XX:+UseCMSInitiatingOccupancyOnly
--Des.networkaddress.cache.ttl=60
--Des.networkaddress.cache.negative.ttl=10
--XX:+AlwaysPreTouch
--Xss2m
--Djava.awt.headless=true
--Dfile.encoding=UTF-8
--Djna.nosys=true
--XX:-OmitStackTraceInFastThrow
--Dio.netty.noUnsafe=true
--Dio.netty.noKeySetOptimization=true
--Dio.netty.recycler.maxCapacityPerThread=0
--Dlog4j.shutdownHookEnabled=false
--Dlog4j2.disable.jmx=true
-
--Djava.io.tmpdir=\${ES_TMPDIR}
--XX:+HeapDumpOnOutOfMemoryError
--XX:HeapDumpPath=data
--XX:ErrorFile=logs/hs_err_pid%p.log
-8:-XX:+PrintGCDetails
-8:-XX:+PrintGCDateStamps
-8:-XX:+PrintTenuringDistribution
-8:-XX:+PrintGCApplicationStoppedTime
-8:-Xloggc:logs/gc.log
-8:-XX:+UseGCLogFileRotation
-8:-XX:NumberOfGCLogFiles=32
-8:-XX:GCLogFileSize=64m
-9-:-Xlog:gc*,gc+age=trace,safepoint:file=logs/gc.log:utctime,pid,tags:filecount=32,filesize=64m
-9-:-Djava.locale.providers=COMPAT
-10-:-XX:UseAVX=2
-END
 
 cat > /opt/elasticsearch9/config/jvm.options <<END
 -Xms2g
