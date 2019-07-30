@@ -1,3 +1,5 @@
+#!/bin/bash
+
 mv /opt/elasticsearch-6.8.0 /opt/elasticsearch8 
 
 cat > /opt/elasticsearch8/config/elasticsearch.yml <<END
